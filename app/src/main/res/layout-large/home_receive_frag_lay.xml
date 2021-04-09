@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/reading_content_bg"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_gravity="center|top"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <GridView
+            android:id="@+id/bible_verse_view"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fadeScrollbars="false"
+            android:layout_gravity="center"
+            android:nestedScrollingEnabled="true"
+            android:numColumns="2"
+            android:scrollbarFadeDuration="0"
+            tools:listitem="@layout/gridrecyclerview" />
+
+        <GridView
+            android:id="@+id/bible_word_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fadeScrollbars="false"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:nestedScrollingEnabled="true"
+            android:numColumns="2"
+            android:scrollbarFadeDuration="0"
+            tools:listitem="@layout/gridrecyclerview" />
+
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

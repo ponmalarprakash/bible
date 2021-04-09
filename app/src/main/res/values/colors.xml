@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#BAB86C</color>
+    <color name="colorPrimaryDark">#404819</color>
+    <color name="colorAccent">#BAB86C</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000001</color>
+    <color name="theme_color"><!--#4e779c-->#BAB86C</color>
+    <color name="dark_theme_color">#404819</color>
+    <color name="green">#256D00</color>
+    <color name="lite_blue_color">#d3ebf5</color>
+    <color name="common_bg_color">#fffad4</color>
+    <color name="reading_content_bg">#FFFEEB</color>
+    <color name="side_nav_bg">#F5F3A9</color>
+    <color name="text_color">#292929</color>
+    <color name="unfocus_color">#7C7F42</color>
+    <color name="card_view_bg">#fffad4</color>
+    <color name="colorGreen">#BAB86C</color>
+    <color name="darkPink">#C03C9A</color>
+    <color name="no_interent_bg">#80C0BFBF</color>
+    <color name="pickup_red">#EE3324</color>
+    <color name="network_red">#ffd7df</color>
+
+</resources>

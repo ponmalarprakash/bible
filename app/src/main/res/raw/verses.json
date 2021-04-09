@@ -1,0 +1,31 @@
+{
+  "message": "Success",
+  "status": 200,
+  "error": "",
+  "data":
+  {
+    "defaultDateFormat": "MMM dd,yyyy",
+    "defaultDateTimeFormat": "MMM dd,yyyy hh:mm a",
+    "dateFormat": [
+      "MMM dd,yyyy",
+      "MMMM dd,yyyy",
+      "dd-MM-yyyy",
+      "MM-dd-yyyy",
+      "yyyy/MM/dd",
+      "MMM dd"
+    ],
+    "dateTimeFormat": [
+      "MMM dd,yyyy hh:mm a",
+      "MMMM dd,yyyy hh:mm a",
+      "dd-MM-yyyy hh:mm a",
+      "MM-dd-yyyy hh:mm a",
+      "yyyy/MM/dd hh:mm a",
+      "MMM dd hh:mm a"
+    ],
+    "timeZones": [
+      "Asia/Kolkata",
+      "Asia/Dubai"
+    ]
+  },
+  "process": 0
+}

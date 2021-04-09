@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bible">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".core.AppController"
+        android:allowBackup="true"
+        android:largeHeap="true"
+        android:icon="@drawable/dagbible"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/dagbible"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".splashactivity.view.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".versionselectionactivity.view.VersionSelectionActivity"
+            android:theme="@style/AppTheme.NoActionBar1" />
+
+        <activity
+            android:name=".referencescreen.view.ReferenceActivity"
+            android:theme="@style/AppTheme.NoActionBar1" />
+
+
+        <activity
+            android:name=".commentarylistscreen.view.CommentaryDownloadActivity"
+            android:theme="@style/AppTheme.NoActionBar1" />
+
+        <activity
+            android:name=".commentaryscreen.view.CommentaryActivity"
+            android:theme="@style/AppTheme.NoActionBar1" />
+
+        <activity
+            android:name=".commentarylistfromdb.view.CommentaryDbActivity"
+            android:theme="@style/AppTheme.NoActionBar1" />
+
+
+        <activity
+            android:name=".todayscreen.view.TodayActivity"
+            android:theme="@style/AppTheme.NoActionBar1" />
+
+        <activity
+            android:name=".biblehomeactivity.view.BibleHomeActivity"
+            android:theme="@style/AppTheme.NoActionBar1" />
+
+    </application>
+
+</manifest>

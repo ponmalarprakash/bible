@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/unfocus_color"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dark_theme_color"
+        android:orientation="vertical"
+        android:padding="@dimen/dp10">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtchristTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/books"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp16">
+
+            </androidx.appcompat.widget.AppCompatTextView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp20"
+                android:text="@string/cancel"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp16">
+
+            </androidx.appcompat.widget.AppCompatTextView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/firstLay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <GridView
+                android:id="@+id/beforeChristGridView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/dp5"
+                android:numColumns="5"
+                tools:listitem="@layout/bookgridview" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/noBeforeChristDataFound"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="No Data Found"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp16"/>
+
+            <View
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp10"
+                android:background="@color/white">
+
+            </View>
+
+
+            <GridView
+                android:id="@+id/afterChristGridView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:numColumns="5"
+                android:layout_margin="@dimen/dp5"
+                tools:listitem="@layout/bookgridview" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/noAfterChristDataFound"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="No Data Found"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp16"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/secondLay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <GridView
+                android:id="@+id/gridViewChapter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:visibility="visible"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp10"
+                android:numColumns="6"
+                tools:listitem="@layout/bookgridview" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/noChapterDataFound"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="No Data Found"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp16"/>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp20"
+                android:background="@color/white">
+
+            </View>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewSynopsis"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:visibility="visible"
+                android:layout_marginTop="@dimen/dp10"
+                tools:listitem="@layout/book_recyclerview_item" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/noDataFound"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="No Data Found"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp16"/>
+
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</LinearLayout>
+

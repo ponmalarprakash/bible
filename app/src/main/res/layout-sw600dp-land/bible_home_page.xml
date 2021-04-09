@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="bibleViewModel"
+            type="com.bible.biblehomeactivity.viewmodel.BibleHomeViewModel" />
+
+    </data>
+
+    <FrameLayout
+        android:id="@+id/rootlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.drawerlayout.widget.DrawerLayout
+            android:id="@+id/drawer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="false"
+            android:scrollbars="none">
+
+            <!-- The main content view -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/dark_theme_color">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/header_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="?android:actionBarSize"
+                    android:background="@color/theme_color">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/menu_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            app:srcCompat="@drawable/ic_menu_icon" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/search_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/dp15"
+                            android:layout_toEndOf="@+id/menu_iv"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/ic_search_icon" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/version_name_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="@dimen/dp20"
+                            android:layout_toLeftOf="@+id/bookIcon"
+                            android:gravity="end"
+                            android:text="@string/kjv"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp16"
+                            android:textStyle="bold" />
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/bookIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerInParent="true"
+                            android:layout_margin="@dimen/dp10"
+                            app:srcCompat="@drawable/ic_open_book" />
+
+                    </RelativeLayout>
+
+                </androidx.appcompat.widget.Toolbar>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/bottom_lay"
+                    android:layout_below="@+id/header_lay"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/dp5"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:layout_marginEnd="@dimen/dp5"
+                            android:layout_marginBottom="@dimen/dp10"
+                            app:cardCornerRadius="@dimen/dp10">
+
+                            <FrameLayout
+                                android:id="@+id/bible_content_frame_lay"
+                                android:layout_width="match_parent"
+                                android:padding="@dimen/dp5"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                            </FrameLayout>
+                        </androidx.cardview.widget.CardView>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/dp2"
+                            android:layout_marginTop="@dimen/dp5"
+                            android:layout_marginEnd="@dimen/dp5"
+                            android:layout_marginBottom="@dimen/dp2"
+                            android:layout_weight="1"
+                            android:background="@color/card_view_bg"
+                            app:cardCornerRadius="@dimen/dp10">
+
+                            <FrameLayout
+                                android:id="@+id/frameReceiveLay"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                            </FrameLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/dp2"
+                            android:layout_marginTop="@dimen/dp2"
+                            android:layout_marginEnd="@dimen/dp5"
+                            android:layout_marginBottom="@dimen/dp5"
+                            android:layout_weight="1"
+                            android:background="@color/card_view_bg"
+                            app:cardCornerRadius="@dimen/dp10">
+
+                            <FrameLayout
+                                android:id="@+id/frameCorinthianLay"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                            </FrameLayout>
+                        </androidx.cardview.widget.CardView>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/bottom_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/theme_color"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp">
+
+                    <include layout="@layout/home_bottom_lay" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <!-- The navigation drawer -->
+
+            <LinearLayout
+                android:layout_width="260dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:background="#100000"
+                android:choiceMode="singleChoice"
+                android:fitsSystemWindows="true"
+                android:orientation="vertical"
+                android:scrollbars="none">
+
+                <include layout="@layout/leftsliderlay" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="260dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:choiceMode="singleChoice"
+                android:fitsSystemWindows="true"
+                android:orientation="vertical"
+                android:scrollbars="none">
+
+                <include layout="@layout/rightsliderlay" />
+            </LinearLayout>
+
+
+
+
+        </androidx.drawerlayout.widget.DrawerLayout>
+
+
+
+
+        <ProgressBar
+            android:id="@+id/homeProgressLoader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:indeterminateTint="@color/colorGreen"
+            android:progress="@android:integer/config_longAnimTime"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </FrameLayout>
+</layout>

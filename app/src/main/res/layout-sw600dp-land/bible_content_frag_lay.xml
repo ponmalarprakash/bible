@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/bible_content_lay"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:paddingStart="5dp"
+    android:paddingEnd="5dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/bible_section_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2Co 7:6"
+            android:textStyle="bold"
+            android:visibility="visible"
+            android:textColor="@color/green"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/bible_content_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/text_color"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:text="sample"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
